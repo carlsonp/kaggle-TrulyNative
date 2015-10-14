@@ -1,0 +1,7 @@
+*.pyc
+*.p
+/*.csv
+
+/data/*/*
+/data/*.zip
+/data/*.csv

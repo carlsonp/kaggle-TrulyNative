@@ -1,0 +1,77 @@
+domain endings
+
+.com, .edu, etc.
+
+ratio of sponsored/nonsponsored for each domain ending
+
+look at blacklist and see what types of domain endings are popular
+with ads and spammers
+
+
+
+
+Add duplicate ratio data to features, don't average it with existing
+prediction value.
+
+
+number unique words over number of total words
+this gives representation of the amount of similarity
+in the content (words being used more than once)
+highly occuring words more likely to be sponsored content?
+like the name of the product, company, etc.?
+
+
+
+average URL length in characters
+
+
+
+
+add Incapsula to search, not just domain name
+
+
+
+
+
+valid HTML or not
+using python tidy bindings
+
+
+use float32 or something smaller for values?  save memory?
+
+
+
+file types, exe and others more on native ads?
+
+
+http://fileinfo.com/filetypes/web
+
+http://fileinfo.com/filetypes/common
+
+
+
+increase number of estimators (probably minimal change)
+
+
+
+gradient boosting in scikit
+
+
+clustering to find similar documents
+http://scikit-learn.org/stable/auto_examples/document_clustering.html
+
+
+use warm_start to run separate smaller batches of randomforest trees
+and then combine the results
+
+"The typical way, called stacking, essentially acts as an ensemble itself. You'd do a majority vote or just average probabilities.
+Usually you can do better than that, by using a meta-model that uses prediction from your base models (RF and GBM in your case)
+as features. To utilize this approach you need to learn how to create a dataset of cross validate probabilities. Essentially
+you use k fold, and at each fold you train on all but the k-th fold and predict the k-th fold. You do that for all k folds
+and end up with an array of cross validated predictions. That is a feature for your meta model."
+
+
+reduce correlation in features?
+
+"The greater the inter-tree correlation, the greater the random forest error rate, so one pressure on the model is to have
+the trees as uncorrelated as possible."
