@@ -34,13 +34,19 @@ the sheer number of files to process.  I'm not sure if this
 was a problem with the configuration and setup or the message
 broker [RabbitMQ](https://www.rabbitmq.com/) that I was using.
 
+I also tried various methods of data storage including
+Neo4j, GraphTools, MySQL, and NetworkX.  I ended up just
+keeping everything in memory and serializing the result
+to disk using Pickle for performance reasons.
+
 For machine learning I used the Python library
 [scikit](http://scikit-learn.org) and Random Forests.
 I heavily modified an example script from the Kaggle
 forums and put in improved and updated features, decreased
-memory usage via Python __slots__, and used stacking
+memory usage via Python slots, and used stacking
 to combine multiple Random Forest predictions into a single
 improved prediction.
+
 
 #### How to run
 
